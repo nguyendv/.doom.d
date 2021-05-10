@@ -40,6 +40,16 @@
 ;; lsp optimization
 (setq lsp-optimization-mode t)
 
+(after! org
+   (setq org-todo-keywords
+        '((sequence
+           "TODO(t)"  ; A task that needs doing & is ready to do
+           "STRT(s)"  ; A task that is in progress
+           "WAIT(w)"  ; Something external is holding up this task
+           "|"
+           "DONE(d)"  ; Task successfully completed
+           "KILL(k)"))))
+
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
