@@ -67,3 +67,13 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(after! lsp-mode
+  (lsp-register-client
+    (make-lsp-client
+      :new-connection (lsp-tramp-connection '("typescript-language-server" "--stdio"))
+      :major-modes '(typescript-mode)
+      :remote? t
+      :server-id 'ts-ls-remote))
+  (setq lsp-log-io t)  ;; without this line the ts lang server is tuck at /starting. Need investigating
+  )
