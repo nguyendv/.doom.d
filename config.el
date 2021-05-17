@@ -75,5 +75,8 @@
       :major-modes '(typescript-mode)
       :remote? t
       :server-id 'ts-ls-remote))
-  (setq lsp-log-io t)  ;; without this line the ts lang server is tuck at /starting. Need investigating
+  ;;(setq lsp-log-io t)  ;; without this line the ts lang server is tuck at /starting. Need investigating
   )
+
+;; for .ts, I use prettier instead of lsp format,,
+(after! typescript-mode (setq +format-with-lsp nil))
