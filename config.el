@@ -29,10 +29,10 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(if (file-directory-p "~/Dropbox/org")
-    (setq org-directory "~/Dropbox/org"))
-(if (file-directory-p "~/Dropbox/org")
-    (setq org-agenda-files (directory-files-recursively "~/Dropbox/org/" "\\.org$")))
+(if (file-directory-p "~/Dropbox/Notes")
+    (setq org-directory "~/Dropbox/Notes"))
+(if (file-directory-p "~/Dropbox/Notes")
+    (setq org-agenda-files (directory-files-recursively "~/Dropbox/Notes/" "\\.org$")))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
