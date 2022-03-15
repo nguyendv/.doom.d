@@ -34,6 +34,19 @@
 (if (file-directory-p "~/Dropbox/Notes")
     (setq org-agenda-files (directory-files-recursively "~/Dropbox/Notes/" "\\.org$")))
 
+ ;; Custom agenda views
+(setq org-agenda-custom-commands
+'(
+        ("2" "+/- 1w Agenda" (
+                        (tags-todo "SCHEDULED>=\"<-1w>\"&SCHEDULED<\"<+1w>\""
+                                ((org-agenda-overriding-header "2 weeks Schedule:")
+                                (org-agenda-entry-types '(:scheduled :deadline))))
+
+        )
+        )
+)
+)
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
