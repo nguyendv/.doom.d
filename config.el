@@ -61,6 +61,7 @@
            "TODO(t)"  ; A task that needs doing & is ready to do
            "STRT(s)"  ; A task that is in progress
            "WAIT(w)"  ; Something external is holding up this task
+           "REFLECT(f)"; A completed task but still needs to refect
            "|"
            "DONE(d)"  ; Task successfully completed
            "KILL(k)"))))
